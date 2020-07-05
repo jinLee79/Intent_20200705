@@ -30,7 +30,20 @@ class MainActivity : AppCompatActivity() {
             val myIntent = Intent(this, SecondActivity::class.java)
             myIntent.putExtra("message", inputMessage)
             startActivity(myIntent)
+        }
 
+//        3. 닉네임 변경 버튼 누르면
+        changeNickBtn.setOnClickListener {
+
+//            닉네임 변경 화면으로 가야함. Intent
+            val myIntent = Intent(this, EditNickNameActivity::class.java)
+
+//            화면으로 이동 => 단순히 조회 이동 X
+//            데이터를 받으러 (결과를 받으러) 가는 이동 => 뭘 받으러 가는지 명시.
+//            받을 데이터 (요청) 구별 고유 숫자: requestCode
+
+//            어떤 결과 ? => 새 닉네임을 얻으러. (1000: 새 닉네임)
+            startActivityForResult(myIntent, 1000)
         }
     }
 }
