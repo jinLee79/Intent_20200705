@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 //            데이터를 받으러 (결과를 받으러) 가는 이동 => 뭘 받으러 가는지 명시.
 //            받을 데이터 (요청) 구별 고유 숫자: requestCode
 
-//            어떤 결과 ? => 새 닉네임을 얻으러. (1000: 새 닉네임)
+//            어떤 결과 ? => 새 닉네임을 얻으러. (1000: 새 닉네임)  -- 왕복 티켓임
             startActivityForResult(myIntent, 1000)
         }
     }
